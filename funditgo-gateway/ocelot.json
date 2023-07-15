@@ -117,7 +117,6 @@
       },
 
       "RouteClaimsRequirement": {
-        "Permission_ADMIN_PROYECTOS": "ADMIN_PROYECTOS",
         "Permission_CREATE_PROYECTOS": "CREATE_PROYECTOS"
       },
 
@@ -554,6 +553,64 @@
         }
       ],
       "Key": "ListaDeTiposProyectos"
+    },
+
+    //MS PAGO
+    {
+      "UpstreamPathTemplate": "/api/pago",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "DownstreamPathTemplate": "/api/pago",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7104
+        }
+      ],
+      "Key": "InsertarPago"
+    },
+    {
+      "UpstreamPathTemplate": "/api/pago/image/qr/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamPathTemplate": "/api/pago/image/qr/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7104
+        }
+      ],
+      "Key": "GetQR"
+    },
+    {
+      "UpstreamPathTemplate": "/api/pago/{id}",
+      "UpstreamHttpMethod": [ "PUT" ],
+
+      "DownstreamPathTemplate": "/api/pago/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7104
+        }
+      ],
+      "Key": "ActualizarPago"
+    },
+    {
+      "UpstreamPathTemplate": "/api/pago/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamPathTemplate": "/api/pago/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7104
+        }
+      ],
+      "Key": "GetPagoById"
     }
   ]
 }
