@@ -29,7 +29,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddOcelot(builder.Configuration);
 builder.Services.AddControllers();
 
-services.AddCors(options =>
+builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",
         builder => builder.SetIsOriginAllowed(_ => true)
