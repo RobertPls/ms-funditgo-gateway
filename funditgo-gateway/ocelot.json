@@ -611,6 +611,66 @@
         }
       ],
       "Key": "GetPagoById"
+    },
+    //CONFIGURACION
+    {
+      "UpstreamPathTemplate": "/api/file/{fileId}",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamPathTemplate": "/api/file/{fileId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "GetFile"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/proyecto/requisito",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "DownstreamPathTemplate": "/api/proyecto/requisito",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "PostRequisito"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/proyecto/requisito",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/proyecto/requisito",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "Eliminar Requisito"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/proyecto/{id}/requisito",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamPathTemplate": "/api/proyecto/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "PostRequisito"
     }
   ]
 }
