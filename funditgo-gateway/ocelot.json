@@ -612,11 +612,10 @@
       ],
       "Key": "GetPagoById"
     },
-    //CONFIGURACION
+    //CONFIGURACION TIPO PROYECTO Y ARCHIVOS REQUISITOS
     {
-      "UpstreamPathTemplate": "/api/file/{fileId}",
+      "UpstreamPathTemplate": "/api/configuracion/file/{fileId}",
       "UpstreamHttpMethod": [ "GET" ],
-
       "DownstreamPathTemplate": "/api/file/{fileId}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -627,11 +626,9 @@
       ],
       "Key": "GetFile"
     },
-
     {
-      "UpstreamPathTemplate": "/api/proyecto/requisito",
+      "UpstreamPathTemplate": "/api/configuracion/proyecto/requisito",
       "UpstreamHttpMethod": [ "POST" ],
-
       "DownstreamPathTemplate": "/api/proyecto/requisito",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -640,13 +637,11 @@
           "Port": 7276
         }
       ],
-      "Key": "PostRequisito"
+      "Key": "PostRequisitoProyectoConfiguracion"
     },
-
     {
-      "UpstreamPathTemplate": "/api/proyecto/requisito",
+      "UpstreamPathTemplate": "/api/configuracion/proyecto/requisito",
       "UpstreamHttpMethod": [ "DELETE" ],
-
       "DownstreamPathTemplate": "/api/proyecto/requisito",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -655,13 +650,11 @@
           "Port": 7276
         }
       ],
-      "Key": "Eliminar Requisito"
+      "Key": "EliminarRequisitoProyectoConfiguracion"
     },
-
     {
-      "UpstreamPathTemplate": "/api/proyecto/{id}/requisito",
+      "UpstreamPathTemplate": "/api/configuracion/proyecto/{id}",
       "UpstreamHttpMethod": [ "GET" ],
-
       "DownstreamPathTemplate": "/api/proyecto/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -670,7 +663,112 @@
           "Port": 7276
         }
       ],
-      "Key": "PostRequisito"
+      "Key": "GetProyectoConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/requerimiento",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/requerimiento",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "PostRequerimientoConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/requerimiento",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/api/requerimiento",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "EliminaRequerimientoConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/requerimiento",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/requerimiento",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "GetListaRequerimientoConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/tipoProyecto",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "DownstreamPathTemplate": "/api/tipoProyecto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "PostTipoProyectoConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/tipoProyecto",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/api/tipoProyecto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "EliminarTipoProyectoConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/tipoProyecto",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/tipoProyecto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "GetListaTipoProyectoEnConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/tipoProyecto/requerimiento",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/tipoProyecto/requerimiento",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "PostRequerimientoATipoProyectoConfiguracion"
+    },
+    {
+      "UpstreamPathTemplate": "/api/configuracion/tipoProyecto/requerimiento",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/api/tipoProyecto/requerimiento",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7276
+        }
+      ],
+      "Key": "DeleteRequerimientoATipoProyectoConfiguracion"
     }
   ]
 }
